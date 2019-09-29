@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="TipsAndTricks.Views.StringFormatPage">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{Binding Name, StringFormat=' Señor {0}'}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Date, StringFormat=' El día {0:MM dd,yyyy}'}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Date, StringFormat=' A la hora es {0:hh\\:mm}'}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding Amount, StringFormat=' Ganaste:  {0:C}'}" HorizontalOptions="CenterAndExpand" />
+            <Label Text="{Binding ChildCount, StringFormat=' Para repartirlo entre tus {0:N} hijos '}" HorizontalOptions="CenterAndExpand" />
+
+            <Label>
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="De: " />
+                        <Span Text="{Binding Company}" FontAttributes="Bold" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
